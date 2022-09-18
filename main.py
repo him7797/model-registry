@@ -6,7 +6,7 @@ import uuid
  
 # adding Folder_2 to the system path
 sys.path.insert(0, '/home/himanshu/Documents/modelRegistry/database')
-from modelRegistry import insertModel
+from modelRegistry import insertModel, insertModelInformation
 
 app = FastAPI()
 
@@ -24,8 +24,9 @@ class SaveModel(BaseModel):
     featuresInfoData: dict
     localInference: bool
     createdBy: str
-        
-        
+    stage:str
+    liveStatus:str
+             
         
 
 @app.get("/")
@@ -53,12 +54,23 @@ async def uploadModelFile(file: bytes = File()):
 
 @app.post("/save-model")
 async def saveModelInfo(saveModel: SaveModel):
-    return saveModel
+    id = uuid.uuid4()
+    await insertModelInformation(id,saveModel.name,
+        saveModel.categoryId,
+        saveModel.modelId,
+        saveModel.description,
+        saveModel.version,
+        saveModel.modelBasicInfoData,
+        saveModel.parameterInfoData,
+        saveModel.metricsInfoData,
+        saveModel.tags,
+        saveModel.featuresInfoData,
+        saveModel.localInference,
+        saveModel.createdBy,
+        saveModel.stage,
+        saveModel.liveStatus)
 
-
-
-@app.post("/save-model")
-async def saveModelInfo(saveModel: SaveModel):
-    return saveModel
+    return {"message":"success"}
+   
 
 

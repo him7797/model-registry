@@ -3,7 +3,7 @@
     "username": "admin",
     "password": "ADHIM717@adhim",
     "database": "model_registry",
-    "host": "svc-3f7717a7-f4f3-486b-962a-f1b9cf8633e5-dml.aws-oregon-2.svc.singlestore.com",
+    "host": "svc-b42cf0c7-1345-43e2-8533-54eef0625796-dml.aws-virginia-4.svc.singlestore.com",
     "port":"3306"
   }
 }
