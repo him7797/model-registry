@@ -1,0 +1,45 @@
+{
+	"modelBasicInfoData": {
+		"dataSetLink": null,
+		"description": "description",
+		"modelCategory": "objectDetection",
+		"modelFormat": "onnx",
+		"modelName": "Model1",
+		"modelVersion": "version1",
+		"ownerName": "admin",
+		"pretrained": "No",
+		"tags": "tags",
+		"taskType": "Classification",
+		"trainingFramework": "yolov4",
+		"usecaseCategory": "manuafacturingAndSafety",
+		"usecasePreferred": "abandonedBagDetection"
+	},
+	"parameterInfoData": {
+		"lro": 0.01,
+		"lrf": 0.1,
+		"momentum": 0.937,
+		"weight_decay": 0.0005,
+		"warmup_epochs": 3,
+		"warmup_bias_lr": 0.1
+	},
+	"metricsInfoData": {
+		"mAP": 56
+	},
+	"featuresInfoData": {
+		"class1": "Not Abandoned",
+		"class2": "Abandoned"
+	},
+	"name":"Model1",
+	"categoryId":"85c69b31-88cf-45cd-9c40-f0c19812bb28",
+	"description":"Some new model",
+	"version":"2",
+	"createdBy":"Daniel",
+	"stage":"2",
+	"liveStatus":"Active",
+	"tags":{
+		"tag1":"Just a tag",
+		"tag2":"Just a tag"
+	},
+	"artifacts":"Just testing"
+	
+}
