@@ -1,5 +1,6 @@
 import json
 
+
 class ConfigHandler():
     def initJson(self, filename):
         try:
@@ -12,4 +13,3 @@ class ConfigHandler():
 
     def getMemesqlConfig(self):
         return self.initJson('/home/himanshu/Documents/modelRegistry/database/memsqlConfig.json')
-        
